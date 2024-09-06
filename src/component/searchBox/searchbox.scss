@@ -1,0 +1,15 @@
+.serchbox-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  #search-box {
+    width: 50%;
+    text-align: center;
+    height: 25px;
+    border-radius: 5px;
+  }
+  #search-icon {
+    position: relative;
+    right: 250px;
+  }
+}

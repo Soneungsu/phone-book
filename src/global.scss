@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+//navbar section
+
+@import url(./component/Navbar/navbar.scss);
+
+//contact section
+
+@import url(./component/contact/contact.scss);
+@import url(./component/contactList/contactlist.scss);
+
+//searchBox
+@import url(./component/searchBox/searchbox.scss);
+
+//modal
+@import url(./component/modal/modal.scss);
+
+body {
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
