@@ -16,9 +16,9 @@ const ContactForm = () => {
       {modal === true ? <Modal setModal={setModal} /> : null}
       <div className="form-wrap">
         <Navbar />
-        <div className="serch-container">
-          <SearchBox />
-        </div>
+
+        <SearchBox />
+
         <ContactList />
         <button className="add-btn" onClick={contactListModal}>
           +

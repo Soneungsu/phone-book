@@ -1,12 +1,9 @@
-import { useDispatch, useSelector } from "react-redux";
-import Navbar from "./component/Navbar/Navbar.jsx";
+import { useSelector } from "react-redux";
+
 import ContactForm from "./component/contact/ContactForm.jsx";
-import ContactList from "./component/contactList/ContactList.jsx";
 import "./global.scss";
 
 function App() {
-  const dispatch = useDispatch();
-
   return (
     <>
       <ContactForm />

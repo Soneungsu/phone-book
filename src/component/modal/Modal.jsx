@@ -8,9 +8,17 @@ const Modal = ({ setModal }) => {
 
   const addContact = (e) => {
     e.preventDefault();
-    setModal(false);
+
+    if (name.trim() === "" || phoneNumber.trim() === "") {
+      alert("이름 또는 전화번호를 입력해주세요");
+      setModal(true);
+      return;
+    }
     dispatch({ type: "ADD_CONTACT", payload: { name, phoneNumber } });
+    setModal(false);
   };
+
+  //예외처리
 
   return (
     <div className="modal-contain">

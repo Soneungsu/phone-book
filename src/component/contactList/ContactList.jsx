@@ -1,13 +1,13 @@
 import React from "react";
-import ContactItems from "../contactItems/ContactItems";
 import { useSelector } from "react-redux";
+import ContactItems from "../contactItems/ContactItems";
 
 const ContactList = () => {
   const contactList = useSelector((state) => state.contactList);
   return (
     <>
-      {contactList.map((item) => (
-        <ContactItems />
+      {contactList.map((item, index) => (
+        <ContactItems key={index} item={item} />
       ))}
     </>
   );
