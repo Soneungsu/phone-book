@@ -2,21 +2,21 @@
 
 //navbar section
 
-@import url(./component/Navbar/navbar.scss);
+@import "./component/navbar/navbar.scss";
 
 //contact section
 
-@import url(./component/contact/contact.scss);
-@import url(./component/contactList/contactlist.scss);
+@import "./component/contact/contact.scss";
+@import "./component/contactList/contactlist.scss";
 
 //contact Items
-@import url(./component/contactItems/contact.scss);
+@import "./component/contactItems/contact.scss";
 
 //searchBox
-@import url(./component/searchBox/searchbox.scss);
+@import "./component/searchBox/searchbox.scss";
 
 //modal
-@import url(./component/modal/modal.scss);
+@import "./component/modal/modal.scss";
 
 body {
   width: 100%;

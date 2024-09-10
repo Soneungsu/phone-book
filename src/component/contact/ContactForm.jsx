@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Navbar from "../Navbar/Navbar";
+import Navbar from "../navbar/Navbar";
 import Modal from "../modal/Modal";
 import { SearchBox } from "../searchBox/SearchBox";
 import ContactList from "../contactList/ContactList";
@@ -10,7 +10,7 @@ const ContactForm = () => {
 
   const contactListModal = (e) => {
     e.preventDefault();
-    // console.log(modal);
+    // console.log(modaln);
     setModal(!modal);
   };
 
