@@ -3,11 +3,11 @@ import React, { useState } from "react";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export const SearchBox = () => {
+export const SearchBox = ({ onSearch }) => {
   const [serchUser, setSearchUser] = useState("");
   const inputSearch = (e) => {
     setSearchUser(e.target.value);
-    // console.log(searchUser);
+    onSearch(e.target.value);
   };
   return (
     <div className="search-container">
