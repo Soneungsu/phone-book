@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 
 const Modal = ({ setModal }) => {
   const [name, setName] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState(0);
+  const [phoneNumber, setPhoneNumber] = useState("");
   const dispatch = useDispatch();
 
   const addContact = (e) => {

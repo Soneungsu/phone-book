@@ -1,4 +1,6 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEllipsis } from "@fortawesome/free-solid-svg-icons";
 
 const ContactItems = ({ item }) => {
   return (
@@ -15,7 +17,9 @@ const ContactItems = ({ item }) => {
         </div>
       </div>
       <div>
-        <p>이거</p>
+        <p>
+          <FontAwesomeIcon icon={faEllipsis} className="see-more" />
+        </p>
       </div>
     </div>
   );
