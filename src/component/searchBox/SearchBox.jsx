@@ -12,14 +12,18 @@ export const SearchBox = ({ onSearch }) => {
   return (
     <div className="search-container">
       <div className="serchbox-wrap">
-        <input
-          type="text"
-          placeholder="Search by name or number"
-          id="search-box"
-          onChange={inputSearch}
-        />
+        <div className="input-inner">
+          <input
+            type="text"
+            placeholder="Search by name or number"
+            id="search-box"
+            onChange={inputSearch}
+          />
+        </div>
+        <div className="searchicon-wrap">
+          <FontAwesomeIcon icon={faSearch} id="search-icon" />
+        </div>
       </div>
-      <FontAwesomeIcon icon={faSearch} id="search-icon" />
     </div>
   );
 };

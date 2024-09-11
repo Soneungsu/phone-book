@@ -1,36 +1,29 @@
 .search-container {
-  display: flex;
-  flex-direction: column;
   width: 100%;
-  #search-icon {
-    position: relative;
-    width: 20px;
-    left: 80px;
-    bottom: 23px;
-  }
   .serchbox-wrap {
     display: flex;
-    justify-content: center;
-    align-items: center;
-
-    #search-box {
-      width: 70% !important;
-      text-align: center;
-      height: 25px;
-      border-radius: 5px;
+    flex-direction: column;
+    margin: 0 60px;
+    .input-inner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      #search-box {
+        width: 100% !important;
+        text-align: center;
+        height: 25px;
+        border-radius: 5px;
+      }
     }
-  }
-}
-
-@media (max-width: 768px) {
-  .search-container {
-    #search-box {
-      width: calc(100% - 40px); /* 여백이나 패딩을 고려하여 조절 */
-    }
-    #search-icon {
-      width: 20px;
-      left: 10px; /* 모바일 화면에서 적절한 위치로 조정 */
-      bottom: 10px;
+    .searchicon-wrap {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      #search-icon {
+        position: relative;
+        bottom: 23px;
+        margin: 0 10px;
+      }
     }
   }
 }
