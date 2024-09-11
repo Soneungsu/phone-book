@@ -18,7 +18,16 @@
 //modal
 @import "./component/modal/modal.scss";
 
+html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
   max-width: 100%;
   height: 100vh;
   box-sizing: border-box;
