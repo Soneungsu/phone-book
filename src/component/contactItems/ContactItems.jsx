@@ -24,19 +24,19 @@ const ContactItems = ({ item }) => {
           </p>
         </div>
       </div>
-      <Modal />
+      {/* <Modal /> */}
     </div>
   );
 };
 
-function Modal() {
-  return (
-    <div className="seemore-contain">
-      <div className="seemore-wrap">
-        <div>수정하기</div>
-        <div>삭제하기</div>
-      </div>
-    </div>
-  );
-}
+// function Modal() {
+//   return (
+//     <div className="seemore-contain">
+//       <div className="seemore-wrap">
+//         <div>수정하기</div>
+//         <div>삭제하기</div>
+//       </div>
+//     </div>
+//   );
+// }
 export default ContactItems;
