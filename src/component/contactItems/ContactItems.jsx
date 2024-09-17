@@ -4,6 +4,9 @@ import { faEllipsis } from "@fortawesome/free-solid-svg-icons";
 
 const ContactItems = ({ item }) => {
   const [modal, setModal] = useState(false);
+  const editedModal = () => {
+    setModal(!modal);
+  };
   return (
     <div className="contact-items-contain">
       <div className="contact-items-wrap">
@@ -20,23 +23,27 @@ const ContactItems = ({ item }) => {
         </div>
         <div>
           <p>
-            <FontAwesomeIcon icon={faEllipsis} className="see-more" />
+            <FontAwesomeIcon
+              icon={faEllipsis}
+              className="see-more"
+              onClick={editedModal}
+            />
           </p>
         </div>
       </div>
-      {/* <Modal /> */}
+      {modal === true ? <Modal /> : null}
     </div>
   );
 };
 
-// function Modal() {
-//   return (
-//     <div className="seemore-contain">
-//       <div className="seemore-wrap">
-//         <div>수정하기</div>
-//         <div>삭제하기</div>
-//       </div>
-//     </div>
-//   );
-// }
+function Modal() {
+  return (
+    <div className="seemore-contain">
+      <div className="seemore-wrap">
+        <div>수정하기</div>
+        <div>삭제하기</div>
+      </div>
+    </div>
+  );
+}
 export default ContactItems;
