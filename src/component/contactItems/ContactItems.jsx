@@ -1,12 +1,16 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEllipsis } from "@fortawesome/free-solid-svg-icons";
+import { faEllipsis, faCircleMinus } from "@fortawesome/free-solid-svg-icons";
+import { useDispatch } from "react-redux";
 
 const ContactItems = ({ item }) => {
   const [modal, setModal] = useState(false);
-  const editedModal = () => {
-    setModal(!modal);
+  const dispatch = useDispatch();
+  const deleted = () => {
+    // console.log("gg");
+    dispatch({ type: "DELETED_CONTACT", payload: item.id });
   };
+
   return (
     <div className="contact-items-contain">
       <div className="contact-items-wrap">
@@ -22,28 +26,47 @@ const ContactItems = ({ item }) => {
           </div>
         </div>
         <div>
-          <p>
-            <FontAwesomeIcon
-              icon={faEllipsis}
-              className="see-more"
-              onClick={editedModal}
-            />
-          </p>
+          {modal ? (
+            <p className="seemore-wrap">
+              <FontAwesomeIcon
+                icon={faCircleMinus}
+                className="deleted-btn"
+                onClick={deleted}
+              />
+            </p>
+          ) : (
+            <p>
+              <FontAwesomeIcon
+                icon={faEllipsis}
+                className="see-more"
+                onClick={() => {
+                  setModal(true);
+                }}
+              />
+            </p>
+          )}
         </div>
       </div>
-      {modal === true ? <Modal /> : null}
     </div>
   );
 };
 
-function Modal() {
-  return (
-    <div className="seemore-contain">
-      <div className="seemore-wrap">
-        <div>수정하기</div>
-        <div>삭제하기</div>
-      </div>
-    </div>
-  );
-}
+// function Modal({ item, setModal }) {
+//   const dispatch = useDispatch();
+//   const deleted = (e, id) => {
+//     e.preventDefault();
+//     dispatch({ type: "DELETE_CONTACT", payload: id });
+//   };
+//   return (
+//     <div className="seemore-contain">
+//       <div className="seemore-wrap">
+//         <FontAwesomeIcon
+//           icon={faCircleMinus}
+//           className="deleted-btn"
+//           onClick={deleted}
+//         />
+//       </div>
+//     </div>
+//   );
+// }
 export default ContactItems;
